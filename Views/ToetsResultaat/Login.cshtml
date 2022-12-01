@@ -1,0 +1,10 @@
+
+@{
+    var returnUrl = ViewData["ReturnUrl"] as string;
+}
+
+<form action= "/login?ReturnUrl=@System.Net.WebUtility.UrlEncode(returnUrl)" method ="post">
+    <input type="text" naam ="naam" placeholder="Naam" />
+    <input type="password" naam ="password" placeholder="Wachtwoord" />
+    <input type="submit" value="login" />
+</form>
